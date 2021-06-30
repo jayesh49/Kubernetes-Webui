@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<title>Kubernetes Go</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body class="back">
+<script src="script.js"></script>
+	
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item w3-brown">Menu</h3>
+  <button class="w3-bar-item w3-button " onclick="lw('kubectl get pods --kubeconfig admin.conf')">View Pod</button>
+  <button class="w3-bar-item w3-button" onclick="lw('kubectl get deploy --kubeconfig admin.conf')">View Deployment</button>
+  <button class="w3-bar-item w3-button" onclick="lw('kubectl get svc --kubeconfig admin.conf')">View Services</button>
+
+  <button class="w3-bar-item w3-button" onclick="pod();">Launch Pod</button>
+  <button class="w3-bar-item w3-button" onclick="deploy();">Deployment</button>
+  <button class="w3-bar-item w3-button" onclick="exp();">Expose Services</button>
+  <button class="w3-bar-item w3-button" onclick="rep();">Scale Replica</button>
+  <button class="w3-bar-item w3-button" onclick="del();">Delete Specific Resource</button>
+  <button class="w3-bar-item w3-button" onclick="lw('echo Wait Resetting Environment It May Take a While...'); lw('kubectl delete all --all --kubeconfig admin.conf')">Reset Kubernetes Go</button>
+  <div id="d1">
+  <p id="p1">Enter your command here : </p>
+  <input id="in1">
+  <button id="bt1" onclick='lw();'>Click here</button>
+  </div>
+
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+<div class="w3-container w3-black">
+  <h1>Kubernetes Go</h1>
+</div>
+<!--<img src="https://image.shutterstock.com/image-illustration/green-grained-ultra-hd-background-260nw-1612884064.jpg" alt="Car" style="width:100%">
+-->
+</div>
+<div class="w3-display-container">
+  <p><pre id="id1">your output will be printed here</pre></p>
+  </div>
+
+
+
+<style>
+#id1 {
+  width: 60%;
+  height: 80%;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: 5px solid gray;
+  margin-left: 27%;
+  overflow: auto;
+}
+
+.back {
+  background-image: url('https://static-cse.canva.com/blob/142356/removing-background-images_Unsplash.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style>
+
